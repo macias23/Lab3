@@ -2,20 +2,18 @@ public class Palindrome {
     public static boolean isPalindrome(String word){
     int i1=0;
     int i2=word.length()-1;
-    boolean isPalindrome=true;
     while(i2>i1){
         if (word.charAt(i1)!=word.charAt(i2)){
-            isPalindrome=false;
-            break;
+            return false;
         }
         i1++;
         i2--;
     }
-    return isPalindrome;
+    return true;
     }
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("kot"));
+        System.out.println(isPalindrome("abba"));
     }
 }
 
