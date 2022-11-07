@@ -1,13 +1,12 @@
 import java.lang.Math;
 public class pierwiastki {
     public static void main(String[] args) {
-        calculateRoot(0, 0); // write testing here
+        calculateRoot(0,7, 6); // write testing here
     }
 
     public static void calculateRoot(float a, float b, float c) { // Write calculations for quadratic function
         if (a == 0) {
-            float x = -c / b;
-            System.out.println("Rozwiązaniem równania jest x=" + x);
+            calculateRoot(b,c);
             return;
         }
         double delta = Math.pow(b, 2) - 4 * a * c;
